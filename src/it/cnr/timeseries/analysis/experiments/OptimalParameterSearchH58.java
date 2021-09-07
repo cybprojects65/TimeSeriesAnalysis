@@ -13,8 +13,8 @@ public class OptimalParameterSearchH58 {
 	
 	public static void main(String args[]) throws Exception{
 		
-		File timeSeriesTable = new File("ctc_timeseries_haul10.csv");
-		//File timeSeriesTable = new File("ctc_timeseries_haul10_2018.csv");
+		//File timeSeriesTable = new File("ctc_timeseries_haul10.csv");
+		File timeSeriesTable = new File("ctc_timeseries_haul10_2018.csv");
 		//File timeSeriesTable = new File("D:\\WorkFolder\\Experiments\\EcologicalModelling Solemon\\SSA\\Sepia_officinalis\\Serie stazioni mancanti fino al 2018\\s58.csv");
 		
 		double trueValue = 72.96804047;
