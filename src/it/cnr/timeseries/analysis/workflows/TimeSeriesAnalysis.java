@@ -52,7 +52,9 @@ public class TimeSeriesAnalysis {
 	}
 
 	public void process(File timeSeriesTable, String valuescolum, String timecolumn, AggregationFunctions aggregationFunction, Sensitivity sensitivityP, int fftwindowsamples, int SSAAnalysisWindowSamples, float SSAEigenvaluesThreshold, int SSAPointsToForecast, boolean forceUniformSampling, boolean doFourierAnalysis, boolean doSSA) throws Exception {
-
+		
+		new File(forecastFile).delete();
+		
 		String tablename = timeSeriesTable.getName();
 		String aggregationFunc = aggregationFunction.name();
 		String fftwindowsamplesS = "" + fftwindowsamples;
