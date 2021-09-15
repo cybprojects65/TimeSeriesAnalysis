@@ -13,7 +13,7 @@ public class OptimalParameterSearchH58_Valid {
 	
 	public static void main(String args[]) throws Exception{
 		
-		File timeSeriesTable = new File("C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Validazione\\SSA\\Serie 2016-2018\\s58.csv");
+		File timeSeriesTable = new File("C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Validazione\\SSA\\Serie 2016-2018\\s48.csv");
 		
 		double trueValue = 72.9680404663085;
 		
@@ -99,6 +99,7 @@ public class OptimalParameterSearchH58_Valid {
 			tsae.process(timeSeriesTable, valuescolum, timecolumn, aggregationFunction, sensitivityP, fftwindowsamples, SSAAnalysisWindowSamples, SSAEigenvaluesThreshold, SSAPointsToForecast, forceUniformSampling, doFourierAnalysis, doSSA);
 			}catch(Exception e) {
 				e.printStackTrace();
+				continue;
 			}
 			
 			

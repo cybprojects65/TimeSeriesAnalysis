@@ -140,6 +140,7 @@ public class OptimalParameterSearchHAll {
 			tsae.process(timeSeriesTable, valuescolum, timecolumn, aggregationFunction, sensitivityP, fftwindowsamples, SSAAnalysisWindowSamples, SSAEigenvaluesThreshold, SSAPointsToForecast, forceUniformSampling, doFourierAnalysis, doSSA);
 			}catch(Exception e) {
 				e.printStackTrace();
+				continue;
 			}
 			
 			
