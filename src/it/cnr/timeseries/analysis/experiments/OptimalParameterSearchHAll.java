@@ -43,7 +43,7 @@ public class OptimalParameterSearchHAll {
 
 			String station = timeSeriesTable.getName().replace(".csv", "").replace("s", "");
 			
-			if (!station.equals("48")) continue;
+			//if (!station.equals("68")) continue;
 			
 			List<String> allLines = Files.readAllLines(originalTimeSeriesTable.toPath());
 			double trueValue = 0;
