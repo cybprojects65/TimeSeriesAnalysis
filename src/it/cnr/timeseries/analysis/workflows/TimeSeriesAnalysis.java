@@ -136,13 +136,19 @@ public class TimeSeriesAnalysis {
 		TimeSeries ts = TimeSeries.buildFromSignal(signal);
 		String timepattern = ts.getTimepattern();
 		System.out.println("TimeSeriesAnalysis->Detected time pattern " + timepattern);
-		String chartpattern = "MM-dd-yy";
-		if (timepattern.equals("s") || (DateGuesser.isJavaDateOrigin(ts.getTime()[0]) && DateGuesser.isJavaDateOrigin(ts.getTime()[ts.getTime().length - 1]))) {
+		
+		String chartpattern = "yyyy";
+		if (timepattern.equals("s") || timepattern.equals("HH:mm:ss:SSS") || (DateGuesser.isJavaDateOrigin(ts.getTime()[0]) && DateGuesser.isJavaDateOrigin(ts.getTime()[ts.getTime().length - 1]))) {
 			System.out.println("TimeSeriesAnalysis->Changing chart pattern to seconds");
-			chartpattern = "HH:mm:ss:SS";
-		} else
-			System.out.println("TimeSeriesAnalysis->Chart pattern remains " + chartpattern);
-
+			chartpattern = "HH:mm:ss:SSS";
+		} else if (timepattern.equals("yyyy")){
+			chartpattern = timepattern;
+		} else if (timepattern.equals("MM/yyyy")){
+			chartpattern = "yyyy";
+		}	
+		
+		System.out.println("TimeSeriesAnalysis->Chart pattern ->" + chartpattern);
+		
 		System.out.println("TimeSeriesAnalysis->Uniformly sampling the signal");
 		if (display)
 			SignalProcessing.displaySignalWithTime(ts.getValues(), ts.getTime(), "Time Series", chartpattern);

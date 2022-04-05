@@ -1,0 +1,5 @@
+annual time series -> yyyy
+monthly time series ->	MM/yyyy
+daily time series -> MM/dd/yyyy
+hourly-to-second time series with date information -> HH:mm:ss MM/dd/yyyy
+hourly-to-millisecond time series -> HH:mm:ss:SSS

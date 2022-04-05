@@ -157,7 +157,7 @@ public class TimeSeries {
 			if (counter == 0) {
 				timepattern = DateGuesser.getPattern(timel);
 				ts.setTimepattern(timepattern);
-				System.out.println("Time pattern: " + timepattern);
+				System.out.println("***Time pattern: " + timepattern);
 				sdf = new SimpleDateFormat(timepattern, Locale.ENGLISH);
 			}
 			try{

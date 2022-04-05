@@ -168,6 +168,7 @@ public class SignalProcessing {
 		}
 		TimeSeriesCollection dataset = new TimeSeriesCollection();
 		dataset.addSeries(series);
+		
 		JFreeChart chart = TimeSeriesGraph.createStaticChart(dataset, format,name);
 		Image image = ImageTools.toImage(chart.createBufferedImage(680, 420));
 		return image;
