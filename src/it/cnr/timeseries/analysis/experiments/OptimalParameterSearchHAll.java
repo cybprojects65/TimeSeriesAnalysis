@@ -31,19 +31,26 @@ public class OptimalParameterSearchHAll {
 		// Solemon\\Validazione\\SSA\\Serie 2016-2018\\").listFiles();
 
 		// SOL = Solea solea
-		File originalTimeSeriesTable = new File(
-				"C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Data_EcologicalModelling_Solemon\\solemon\\sol_index.csv");
-		File timeSeriesTables[] = new File(
-				"C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Validazione\\Solea solea\\2006-2018")
-						.listFiles();
+		//File originalTimeSeriesTable = new File(
+			//	"C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Data_EcologicalModelling_Solemon\\solemon\\sol_index.csv");
+		//File timeSeriesTables[] = new File(
+			//	"C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Validazione\\Solea solea\\2006-2018")
+						//.listFiles();
 
+		// MTS = Solea solea
+				File originalTimeSeriesTable = new File(
+						"C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Data_EcologicalModelling_Solemon\\solemon\\mts_index.csv");
+				File timeSeriesTables[] = new File(
+						"C:\\Users\\Utente\\Ricerca\\Experiments\\EcologicalModelling Solemon\\Validazione\\Squilla mantis\\2006-2008")
+								.listFiles();
+				
 		for (int k = 0; k < timeSeriesTables.length; k++) { // cycle through all time series
 
 			File timeSeriesTable = timeSeriesTables[k];
 
 			String station = timeSeriesTable.getName().replace(".csv", "").replace("s", "");
 			
-			if (!station.equals("48")) continue;
+			//if (!station.equals("48")) continue;
 			
 			List<String> allLines = Files.readAllLines(originalTimeSeriesTable.toPath());
 			double trueValue = 0;
